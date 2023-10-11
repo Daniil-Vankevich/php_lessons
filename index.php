@@ -198,21 +198,75 @@
 
 		<?php 
 			$rabbit5 = new Rabbit;
-			$rabbit5->z = 70;
-			$rabbit5->w = 70;
+			$rabbit5->z = 3;
+			$rabbit5->w = 5;
 
 			$rabbit6 = clone $rabbit5;
-			$rabbit6-> z = 99;
-			$rabbit6-> w = 99;
+			$rabbit6-> z = 7;
+			$rabbit6-> w = 8;
 
 			echo " z: {$rabbit6-> z}, w: {$rabbit6-> w}";
 			?>
 			<br>
 			
+			<!-- задача: расстояние между двумя точками -->
+			
 			<?
 			echo " z: {$rabbit5-> z}, w: {$rabbit5-> w}";
+			?>
+			<br>
+			<br>
+			<?
+			$result = sqrt(pow(($rabbit6-> z - $rabbit5-> z), 2) + pow(($rabbit6-> w - $rabbit5-> w), 2));
+
+			echo $result;
 		?>
+
+		<br>
+		<br>
+
+		<?php 
 		
+		if (define('NUMBERIC', 69)) {
+
+			echo "Constant NUMBERIC is created now and have a value 69";
+		} else {
+			echo "Morgenstern";
+		};
+
+		?>
+
+		<br>
+		<?
+		if (define('NUMBERIC', 69)) {
+
+			echo "Constant NUMBERIC is created now and have a value 69";
+		} 
+		else {
+			echo "Morgenstern";
+		}
+
+		?>
+
+
+			<!-- использование функции constant для присвоения динамического имени переменной -->
+
+			<br>
+			<br>
+			<?php 
+			
+			$numConst = mt_rand(1, 5);
+			$nameConst = "VALUE($numConst)";
+			define($nameConst, $numConst);
+			echo constant($nameConst);
+
+			?>
+			<br>
+
+			<?php 
+			echo 'ИМЯ ФАЙЛА ' . __fILE__ . '<br>';
+			echo 'СТРОКА ' . __LINE__ . '<br>';
+			?>
 
 </body>
 
