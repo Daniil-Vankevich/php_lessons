@@ -268,6 +268,110 @@
 			echo 'СТРОКА ' . __LINE__ . '<br>';
 			?>
 
+			<br>
+			<br>
+			<br>
+			
+			<?php 
+			class ConstAge {
+				const AGE = "string";
+			}
+			if (defined('ConstAge::AGE')) {
+				echo "Constant is defined";
+			} else {
+				echo "Constant is undefined!";
+			}
+			?>
+
+			<br>
+			<br>
+			<br>
+
+			<?php 
+			$rabbit10 = new Rabbit;
+			$rabbit10 -> x = 5;
+			$rabbit10 -> y = 5;
+			echo $rabbit10 -> x;
+			?>
+			<br>
+			<?
+			echo $rabbit10 -> y;
+			?>
+
+			<br>
+			<br>
+			<br>
+
+			<?php 
+			$num5 = 8;
+			$num5 = $num5 . '+7';
+			echo "Выводим на экран число " . $num5 . " другой текст ";
+			?>
+
+<br>
+			<br>
+			<br>
+
+			<?php 
+			$num6 = 6;
+			$num6 .= '+9';
+			echo "Выводим на экран число " . $num6 . " другой текст ";
+			?>
+
+<br>
+			<br>
+			<br>
+
+			<?php 
+			$num6 = 9;
+			$num6 .= '+3';
+			echo "Выводим на экран число ", $num6, " другой текст ";
+			?>
+
+			<!-- использование арифметических операторов -->
+			<br>
+			<br>
+			<br>
+
+			<?php 
+			
+			if (50 % 2) {
+
+				echo "не четное число";
+			} else {
+				echo "число четное";
+			}
+			
+			?>
+
+			<!-- Условный оператор if -->
+			<br>
+			<br>
+			<br>
+			
+			<?php 
+			$character = "PHP";
+			if ($character == "JavaScript") {
+		?>
+			<h1>Язык программирования JavaScript</h1>
+		<?php 
+				} elseif ($character == "PHP") {
+		?>
+					<h1>Язык программирования PHP</h1>
+		<?php	
+				} elseif ($character == "C++") {
+		?>
+					<h1>Язык программирования C++</h1>
+		<?php	
+				} else {
+		?>
+					<h1>I dont know what is language, mann</h1>
+		<?php
+				}
+		?>
+
+
+
 </body>
 
 </html>
