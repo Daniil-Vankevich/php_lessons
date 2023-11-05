@@ -17,7 +17,7 @@
 		public $y;
 		public $z;
 		public $w;
-		public static $num =120;
+		public static $num = 120;
 	}
 	?>
 
